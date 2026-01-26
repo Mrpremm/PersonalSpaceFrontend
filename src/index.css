@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(135deg, #6a5acd, #7b68ee);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.todo-container {
+  background: #fff;
+  width: 420px;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.todo-container h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #6a5acd;
+}
+
+/* Buttons */
+button {
+  background: #6a5acd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: #5949c8;
+}
+
+/* Section */
+.section {
+  margin-top: 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #f7f7fb;
+  cursor: pointer;
+}
+
+.section-header h3 {
+  font-size: 17px;
+}
+.toggle-btn {
+  background: transparent;
+  color: #6a5acd;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+/* Section Body */
+.section-body {
+  padding: 14px;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Topic Input */
+.topic-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.topic-input textarea {
+  flex: 1;
+  resize: none;
+  height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Checklist */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  border-radius: 6px;
+}
+
+.item:hover {
+  background: #f4f4f4;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete {
+  margin-left: auto;
+  background: transparent;
+  color: #999;
+  font-size: 16px;
+}
+
+.delete:hover {
+  color: red;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .todo-container {
+    width: 92%;
+  }
+}
