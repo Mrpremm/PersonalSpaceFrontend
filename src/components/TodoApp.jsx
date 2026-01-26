@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const API = "http://localhost:5000/api/sections";
+const API = "https://personalspacebackend.onrender.com/api/sections";
 
 export default function TodoApp() {
   const [sections, setSections] = useState([]);
